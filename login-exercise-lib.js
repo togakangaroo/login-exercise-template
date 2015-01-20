@@ -3,7 +3,15 @@
         ;
     
     login = function(username, password) {
-        return password === username;
+        var success, statusMessage;
+        success = password === username;
+        if(success) {
+            statusMessage = "logged in successfully";
+        } else {
+            statusMessage = "login failed";
+        }
+        console.log("User", username, statusMessage);
+        return success;
     }
     
     window.loginApp = {
